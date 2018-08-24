@@ -1,4 +1,4 @@
-FROM Jenkins:latest
+FROM jenkins:latest
 ENV SECRETS_DIR=/run/secrets
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false
 COPY plugins.txt /usr/share/jenkins/plugins.txt
