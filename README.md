@@ -1,0 +1,2 @@
+# BitroidJenkins
+My custom Jenkins
