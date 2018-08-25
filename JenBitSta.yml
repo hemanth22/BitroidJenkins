@@ -13,6 +13,6 @@ services:
 
 secrets:
   jenkins-user:
-    external: true
+    file: ./jenuser
   jenkins-pass:
-    external: true
+    file: ./jenpass
