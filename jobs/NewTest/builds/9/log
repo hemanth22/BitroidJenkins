@@ -1,0 +1,9 @@
+Started by user [8mha:////4KLzZZB3uCeYxq/L2e4OKL8EaaR75wUadNK07N9iqAHIAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZe/dLi1CL9jNTcxLySDACwx4vRwgAAAA==[0mHemanth Bitra
+Building on master in workspace /var/lib/jenkins/workspace/NewTest
+[NewTest] $ /bin/sh -xe /tmp/jenkins8669770612597895747.sh
++ javac Test.java
+[NewTest] $ /bin/sh -xe /tmp/jenkins4490807327490484921.sh
++ java Test
+Welcome Hemanth Bitra.
+Gitcolony notification failed - java.lang.IllegalArgumentException: Invalid url: 
+Finished: SUCCESS

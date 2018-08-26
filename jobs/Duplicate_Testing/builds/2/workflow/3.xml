@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag plugin="workflow-support@2.16">
+  <node class="org.jenkinsci.plugins.workflow.cps.nodes.StepStartNode" plugin="workflow-cps@2.42">
+    <parentIds>
+      <string>2</string>
+    </parentIds>
+    <id>3</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.support.steps.ExecutorStep</descriptorId>
+  </node>
+  <actions>
+    <org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+      <charset>UTF-8</charset>
+    </org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+    <org.jenkinsci.plugins.workflow.support.steps.ExecutorStepExecution_-QueueItemActionImpl plugin="workflow-durable-task-step@2.17">
+      <id>24</id>
+    </org.jenkinsci.plugins.workflow.support.steps.ExecutorStepExecution_-QueueItemActionImpl>
+    <org.jenkinsci.plugins.workflow.support.actions.WorkspaceActionImpl>
+      <node></node>
+      <path>/var/lib/jenkins/workspace/Duplicate_Testing</path>
+      <labels class="sorted-set">
+        <hudson.model.labels.LabelAtom>amd64</hudson.model.labels.LabelAtom>
+        <hudson.model.labels.LabelAtom>amd64-unknown+check_lsb_release_installed</hudson.model.labels.LabelAtom>
+        <hudson.model.labels.LabelAtom>amd64-unknown+check_lsb_release_installed-unknown+check_lsb_release_installed</hudson.model.labels.LabelAtom>
+        <hudson.model.labels.LabelAtom>unknown+check_lsb_release_installed</hudson.model.labels.LabelAtom>
+        <hudson.model.labels.LabelAtom>unknown+check_lsb_release_installed-unknown+check_lsb_release_installed</hudson.model.labels.LabelAtom>
+      </labels>
+    </org.jenkinsci.plugins.workflow.support.actions.WorkspaceActionImpl>
+    <org.jenkinsci.plugins.workflow.actions.TimingAction plugin="workflow-api@2.24">
+      <startTime>1512929223038</startTime>
+    </org.jenkinsci.plugins.workflow.actions.TimingAction>
+  </actions>
+</org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag>

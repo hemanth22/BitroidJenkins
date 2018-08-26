@@ -1,0 +1,3 @@
+[Duplicate_Testing] Running shell script
++ make clean
+rm *o

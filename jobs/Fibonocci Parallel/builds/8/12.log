@@ -1,0 +1,3 @@
+[Fibonocci Parallel] Running shell script
++ make clean
+rm *o

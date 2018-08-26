@@ -1,0 +1,54 @@
+Started by user [8mha:////4KLzZZB3uCeYxq/L2e4OKL8EaaR75wUadNK07N9iqAHIAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZe/dLi1CL9jNTcxLySDACwx4vRwgAAAA==[0mHemanth Bitra
+Building remotely on [8mha:////4EBAPd9wigxC3vPewCm52F8JeHIiFR6IRysqCRQzmBnZAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZR/eT83ILSktQi/ZTEksTk1Dwg0wgASxzf7MoAAAA=[0mdatacenter2 (insiders 7.4.1708 CentOS amd64-CentOS-7.4.1708 CentOS-7.4.1708 amd64 amd64-CentOS) in workspace /var/lib/jenkins/workspace/atmosphere
+Cloning the remote Git repository
+Cloning repository https://github.com/g0t4/jenkins2-course-spring-boot.git
+ > git init /var/lib/jenkins/workspace/atmosphere # timeout=10
+ERROR: Error cloning remote repo 'origin'
+hudson.plugins.git.GitException: Could not init /var/lib/jenkins/workspace/atmosphere
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$5.execute(CliGitAPIImpl.java:747)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$2.execute(CliGitAPIImpl.java:539)
+	at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler$1.call(RemoteGitImpl.java:153)
+	at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler$1.call(RemoteGitImpl.java:146)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:207)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:53)
+	at hudson.remoting.Request$2.run(Request.java:358)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+	Suppressed: hudson.remoting.Channel$CallSiteStackTrace: Remote call to datacenter2
+		at hudson.remoting.Channel.attachCallSiteStackTrace(Channel.java:1693)
+		at hudson.remoting.UserResponse.retrieve(UserRequest.java:310)
+		at hudson.remoting.Channel.call(Channel.java:908)
+		at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler.execute(RemoteGitImpl.java:146)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler.invoke(RemoteGitImpl.java:132)
+		at com.sun.proxy.$Proxy116.execute(Unknown Source)
+		at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1083)
+		at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1123)
+		at hudson.scm.SCM.checkout(SCM.java:495)
+		at hudson.model.AbstractProject.checkout(AbstractProject.java:1202)
+		at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:574)
+		at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:86)
+		at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:499)
+		at hudson.model.Run.execute(Run.java:1727)
+		at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+		at hudson.model.ResourceController.execute(ResourceController.java:97)
+		at hudson.model.Executor.run(Executor.java:429)
+Caused by: hudson.plugins.git.GitException: Command "git init /var/lib/jenkins/workspace/atmosphere" returned status code 1:
+stdout: 
+stderr: /var/lib/jenkins/workspace/atmosphere/.git: Permission denied
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1970)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1938)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1934)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1572)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$5.execute(CliGitAPIImpl.java:745)
+	... 11 more
+ERROR: Error cloning remote repo 'origin'
+Gitcolony notification failed - java.lang.IllegalArgumentException: Invalid url: 
+Finished: FAILURE

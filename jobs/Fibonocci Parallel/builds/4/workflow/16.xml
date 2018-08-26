@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag plugin="workflow-support@2.16">
+  <node class="org.jenkinsci.plugins.workflow.cps.nodes.StepAtomNode" plugin="workflow-cps@2.42">
+    <parentIds>
+      <string>15</string>
+    </parentIds>
+    <id>16</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.MailStep</descriptorId>
+  </node>
+  <actions>
+    <org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+      <charset>UTF-8</charset>
+    </org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>
+    <org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl plugin="workflow-cps@2.42">
+      <arguments class="linked-hash-map">
+        <entry>
+          <string>bcc</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>body</string>
+          <string>Hello Requestor,
+
+Fibonocci job is completed.
+
+Regards,
+Jenkins</string>
+        </entry>
+        <entry>
+          <string>cc</string>
+          <string>bhemanth@localhost,root@localhost</string>
+        </entry>
+        <entry>
+          <string>from</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>replyTo</string>
+          <string></string>
+        </entry>
+        <entry>
+          <string>subject</string>
+          <string>Fibonocci job success</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>hemanth@localhost</string>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </org.jenkinsci.plugins.workflow.cps.actions.ArgumentsActionImpl>
+    <org.jenkinsci.plugins.workflow.actions.TimingAction plugin="workflow-api@2.24">
+      <startTime>1512916943105</startTime>
+    </org.jenkinsci.plugins.workflow.actions.TimingAction>
+    <org.jenkinsci.plugins.workflow.actions.ErrorAction plugin="workflow-api@2.24">
+      <error class="javax.mail.MessagingException">
+        <detailMessage>Could not connect to SMTP host: localhost, port: 25</detailMessage>
+        <stackTrace>
+          <trace>com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1934)</trace>
+          <trace>com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:638)</trace>
+          <trace>javax.mail.Service.connect(Service.java:295)</trace>
+          <trace>javax.mail.Service.connect(Service.java:176)</trace>
+          <trace>javax.mail.Service.connect(Service.java:125)</trace>
+          <trace>javax.mail.Transport.send0(Transport.java:194)</trace>
+          <trace>javax.mail.Transport.send(Transport.java:124)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.MailStep$MailStepExecution.run(MailStep.java:142)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.MailStep$MailStepExecution.run(MailStep.java:128)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution$1$1.call(SynchronousNonBlockingStepExecution.java:49)</trace>
+          <trace>hudson.security.ACL.impersonate(ACL.java:260)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution$1.run(SynchronousNonBlockingStepExecution.java:46)</trace>
+          <trace>java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)</trace>
+          <trace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</trace>
+          <trace>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)</trace>
+          <trace>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)</trace>
+          <trace>java.lang.Thread.run(Thread.java:748)</trace>
+        </stackTrace>
+        <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+          <c class="list"/>
+          <list reference="../c"/>
+        </suppressedExceptions>
+        <next class="java.net.ConnectException">
+          <detailMessage>Connection refused (Connection refused)</detailMessage>
+          <stackTrace>
+            <trace>java.net.PlainSocketImpl.socketConnect(Native Method)</trace>
+            <trace>java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)</trace>
+            <trace>java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)</trace>
+            <trace>java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)</trace>
+            <trace>java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)</trace>
+            <trace>java.net.Socket.connect(Socket.java:589)</trace>
+            <trace>com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:286)</trace>
+            <trace>com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:231)</trace>
+            <trace>com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1900)</trace>
+            <trace>com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:638)</trace>
+            <trace>javax.mail.Service.connect(Service.java:295)</trace>
+            <trace>javax.mail.Service.connect(Service.java:176)</trace>
+            <trace>javax.mail.Service.connect(Service.java:125)</trace>
+            <trace>javax.mail.Transport.send0(Transport.java:194)</trace>
+            <trace>javax.mail.Transport.send(Transport.java:124)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.MailStep$MailStepExecution.run(MailStep.java:142)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.MailStep$MailStepExecution.run(MailStep.java:128)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution$1$1.call(SynchronousNonBlockingStepExecution.java:49)</trace>
+            <trace>hudson.security.ACL.impersonate(ACL.java:260)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution$1.run(SynchronousNonBlockingStepExecution.java:46)</trace>
+            <trace>java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)</trace>
+            <trace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</trace>
+            <trace>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)</trace>
+            <trace>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)</trace>
+            <trace>java.lang.Thread.run(Thread.java:748)</trace>
+          </stackTrace>
+          <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+        </next>
+      </error>
+    </org.jenkinsci.plugins.workflow.actions.ErrorAction>
+  </actions>
+</org.jenkinsci.plugins.workflow.support.storage.SimpleXStreamFlowNodeStorage_-Tag>

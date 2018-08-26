@@ -1,0 +1,6 @@
+[Duplicate_Testing] Running shell script
++ make
+g++ -c -Wall main.cpp -o main.o
+g++ -c -Wall hello.cpp -o hello.o
+g++ -c -Wall factorial.cpp -o factorial.o
+g++  main.o hello.o factorial.o -o Out
