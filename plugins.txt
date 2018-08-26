@@ -12,3 +12,5 @@ ec2:1.36
 thinBackup
 github-oauth
 kubernetes
+github-api
+github-issues
