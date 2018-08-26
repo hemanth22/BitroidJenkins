@@ -4,13 +4,14 @@ services:
 
   main:
     image: bitroid/bitroidjenkins:${TAG:-latest}
+    privileged: true
     ports:
       - 8080:8080
       - 50000:50000
     secrets:
       - jenkins-user
       - jenkins-pass
-
+    
 secrets:
   jenkins-user:
     file: ./jenuser
