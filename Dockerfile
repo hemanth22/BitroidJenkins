@@ -1,5 +1,4 @@
 FROM jenkins:latest
-RUN apt-get update;apt-get install git binutils make gcc cpp g++ -y
 ENV SECRETS_DIR=/run/secrets
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 COPY security.groovy /usr/share/jenkins/ref/init.groovy.d/security.groovy
