@@ -1,0 +1,12 @@
+Started by user [8mha:////4KLzZZB3uCeYxq/L2e4OKL8EaaR75wUadNK07N9iqAHIAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZe/dLi1CL9jNTcxLySDACwx4vRwgAAAA==[0mHemanth Bitra
+Building on master in workspace /var/lib/jenkins/workspace/Helloworld
+[Helloworld] $ /bin/sh -xe /tmp/jenkins1902835446348956339.sh
++ javac HelloWorld.java
+[Helloworld] $ /bin/sh -xe /tmp/jenkins4687172832347557118.sh
++ java HelloWorld
+[PMD] Collecting PMD analysis files...
+[PMD] Searching for all files in /var/lib/jenkins/workspace/Helloworld that match the pattern **/pmd.xml
+[PMD] No files found. Configuration error?
+Skipping warnings blame since Git is the only supported SCM up to now.%n
+Gitcolony notification failed - java.lang.IllegalArgumentException: Invalid url: 
+Finished: SUCCESS

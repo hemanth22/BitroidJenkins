@@ -1,0 +1,61 @@
+Started by user [8mha:////4KLzZZB3uCeYxq/L2e4OKL8EaaR75wUadNK07N9iqAHIAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZe/dLi1CL9jNTcxLySDACwx4vRwgAAAA==[0mHemanth Bitra
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] node
+Running on [8mha:////4IroV8Pcs+6jQ5rgjJ3YNjufhmeCZd0eOESdzWzH4McHAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /var/lib/jenkins/workspace/Fibonocci Parallel
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage (Downloading git repository)
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Downloading git repository
+Proceeding
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] git
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/hemanth22/Fibonocci-CPP.git # timeout=10
+Fetching upstream changes from https://github.com/hemanth22/Fibonocci-CPP.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/hemanth22/Fibonocci-CPP.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision b871a32b8bf3d19da254a23d2013ee2b24dd36b2 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b871a32b8bf3d19da254a23d2013ee2b24dd36b2
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master b871a32b8bf3d19da254a23d2013ee2b24dd36b2
+Commit message: "Bulk upload"
+ > git rev-list b871a32b8bf3d19da254a23d2013ee2b24dd36b2 # timeout=10
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage (Build and execute)
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Build and execute
+Proceeding
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[Fibonocci Parallel] Running shell script
++ make
+g++ -c -Wall main.cpp -o main.o
+g++ -c -Wall hello.cpp -o hello.o
+g++ -c -Wall factorial.cpp -o factorial.o
+g++  main.o hello.o factorial.o -o Out
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage (Complete result file)
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Complete result file
+Proceeding
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[Fibonocci Parallel] Running shell script
++ ./Out
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage (Cleaning Build file)
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Cleaning Build file
+Proceeding
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[Fibonocci Parallel] Running shell script
++ make clean
+rm *o
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage (Archive)
+Using the ‘stage’ step without a block argument is deprecated
+Entering stage Archive
+Proceeding
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] archive
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] step
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // node
+[8mha:////4OGlO5MfysPgpfHbEpKK77vIwCbUncjcgA9RXXutTkfEAAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

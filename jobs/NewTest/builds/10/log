@@ -1,0 +1,11 @@
+Started by user [8mha:////4KLzZZB3uCeYxq/L2e4OKL8EaaR75wUadNK07N9iqAHIAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZe/dLi1CL9jNTcxLySDACwx4vRwgAAAA==[0mHemanth Bitra
+Building on master in workspace /var/lib/jenkins/workspace/NewTest
+[NewTest] $ /bin/sh -xe /tmp/jenkins4984062139028169940.sh
++ javac Test.java
+javac: file not found: Test.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+Build step 'Execute shell' marked build as failure
+Sending e-mails to: hemanth@localhost
+Gitcolony notification failed - java.lang.IllegalArgumentException: Invalid url: 
+Finished: FAILURE

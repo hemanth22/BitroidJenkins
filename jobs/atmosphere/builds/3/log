@@ -1,0 +1,14 @@
+Started by user [8mha:////4KLzZZB3uCeYxq/L2e4OKL8EaaR75wUadNK07N9iqAHIAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZe/dLi1CL9jNTcxLySDACwx4vRwgAAAA==[0mHemanth Bitra
+Building remotely on [8mha:////4EBAPd9wigxC3vPewCm52F8JeHIiFR6IRysqCRQzmBnZAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZR/eT83ILSktQi/ZTEksTk1Dwg0wgASxzf7MoAAAA=[0mdatacenter2 (insiders 7.4.1708 CentOS amd64-CentOS-7.4.1708 CentOS-7.4.1708 amd64 amd64-CentOS) in workspace /var/lib/jenkins/workspace/atmosphere
+java.io.IOException: Failed to mkdirs: /var/lib/jenkins/workspace/atmosphere
+	at hudson.FilePath.mkdirs(FilePath.java:1171)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1200)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:574)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:86)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:499)
+	at hudson.model.Run.execute(Run.java:1727)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+Gitcolony notification failed - java.lang.IllegalArgumentException: Invalid url: 
+Finished: FAILURE

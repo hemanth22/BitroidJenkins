@@ -1,0 +1,20 @@
+Cloning the remote Git repository
+Cloning repository https://github.com/hemanth22/Fibonocci-CPP.git
+ > git init /var/lib/jenkins/workspace/Duplicate_Testing # timeout=10
+Fetching upstream changes from https://github.com/hemanth22/Fibonocci-CPP.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/hemanth22/Fibonocci-CPP.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/hemanth22/Fibonocci-CPP.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/hemanth22/Fibonocci-CPP.git # timeout=10
+Fetching upstream changes from https://github.com/hemanth22/Fibonocci-CPP.git
+ > git fetch --tags --progress https://github.com/hemanth22/Fibonocci-CPP.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision b871a32b8bf3d19da254a23d2013ee2b24dd36b2 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b871a32b8bf3d19da254a23d2013ee2b24dd36b2
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master b871a32b8bf3d19da254a23d2013ee2b24dd36b2
+Commit message: "Bulk upload"
+First time build. Skipping changelog.

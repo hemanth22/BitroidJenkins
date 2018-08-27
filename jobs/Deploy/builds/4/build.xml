@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.16">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>hemanth</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <io.jenkins.blueocean.service.embedded.BlueOceanUrlAction plugin="blueocean-rest-impl@1.3.4">
+      <blueOceanUrlObject class="io.jenkins.blueocean.service.embedded.BlueOceanUrlObjectImpl">
+        <mappedUrl>blue/organizations/jenkins/Deploy/detail/Deploy/4</mappedUrl>
+        <modelObject class="flow-build" reference="../../../.."/>
+      </blueOceanUrlObject>
+    </io.jenkins.blueocean.service.embedded.BlueOceanUrlAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.9">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <hudson.plugins.git.util.BuildData plugin="git@3.6.4">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.6.0">
+              <sha1>db0f5cbf7e4c8eed841464e27f17160aaf0050e6</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>4</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/hemanth22/Fibonocci-CPP.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@3.6.4">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/lib/jenkins/workspace/Deploy</ws>
+    </hudson.plugins.git.GitTagAction>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.6">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/hemanth22/Fibonocci-CPP.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.workflow.support.steps.input.InputAction plugin="pipeline-input-step@2.8">
+      <ids class="java.util.concurrent.CopyOnWriteArrayList"/>
+    </org.jenkinsci.plugins.workflow.support.steps.input.InputAction>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2.42">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <hudson.tasks.MailMessageIdAction plugin="mailer@1.20"/>
+  </actions>
+  <queueId>7</queueId>
+  <timestamp>1513064682561</timestamp>
+  <startTime>1513064682565</startTime>
+  <result>FAILURE</result>
+  <duration>61369</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>node {
+try{
+stage &apos;Downloading git repository&apos;
+git &apos;https://github.com/hemanth22/Fibonocci-CPP.git&apos;
+stage &apos;Approval Management&apos;
+input &apos;Approval for deployment&apos;
+stage &apos;Build and execute&apos;
+sh &apos;make&apos;
+stage &apos;Complete result file&apos;
+sh &apos;./Out &gt; Result.txt&apos;
+stage &apos;Cleaning Build file&apos;
+sh &apos;make clean&apos;
+stage &apos;Generate report&apos;
+publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: &apos;*&apos;, reportFiles: &apos;index.html&apos;, reportName: &apos;HTML Report&apos;, reportTitles: &apos;Job report&apos;])
+stage &apos;Archive&apos;
+archive &apos;*&apos;
+notify(&apos;Success&apos;)
+}catch(err){
+  notify(&quot;Error ${err}&quot;)
+  currentBuild.result = &apos;FAILURE&apos;
+}
+}
+
+def notify(status){
+    emailext (
+      to: &quot;hemanth@localhost.localdomain&quot;,
+      subject: &quot;${status}: Job &apos;${env.JOB_NAME} [${env.BUILD_NUMBER}]&apos;&quot;,
+      body: &quot;&quot;&quot;&lt;p&gt;${status}: Job &apos;${env.JOB_NAME} [${env.BUILD_NUMBER}]&apos;:&lt;/p&gt;
+        &lt;p&gt;Check console output at &lt;a href=&apos;${env.BUILD_URL}&apos;&gt;${env.JOB_NAME} [${env.BUILD_NUMBER}]&lt;/a&gt;&lt;/p&gt;&quot;&quot;&quot;,
+    )
+}</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>156159917</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>33053017046</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>5814034305</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>16645290791</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>1506216001</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>12</iota>
+    <head>1:12</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@3.6.4">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/hemanth22/Fibonocci-CPP.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches class="singleton-list">
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.LocalBranch>
+            <localBranch>master</localBranch>
+          </hudson.plugins.git.extensions.impl.LocalBranch>
+        </extensions>
+      </scm>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/Deploy</workspace>
+      <changelogFile>/var/lib/jenkins/jobs/Deploy/builds/4/changelog0.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>
