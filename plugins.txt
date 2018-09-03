@@ -11,6 +11,10 @@ blueocean
 ec2:1.36
 thinBackup
 github-oauth
+ansible
+ansible-tower
+docker
 kubernetes
 github-api
 github-issues
+ifttt-build-notifier
