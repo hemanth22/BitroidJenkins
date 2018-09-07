@@ -22,3 +22,4 @@ email-ext
 email-ext-recipients-column
 emailext-template
 htmlpublisher
+groovy
