@@ -21,3 +21,4 @@ ifttt-build-notifier
 email-ext
 email-ext-recipients-column
 emailext-template
+htmlpublisher
