@@ -11,6 +11,17 @@ blueocean
 ec2:1.36
 thinBackup
 github-oauth
+ansible
+ansible-tower
+docker
 kubernetes
 github-api
 github-issues
+ifttt-build-notifier
+email-ext
+email-ext-recipients-column
+emailext-template
+htmlpublisher
+groovy
+greenballs
+jenkinslint
