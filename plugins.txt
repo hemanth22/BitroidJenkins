@@ -25,3 +25,4 @@ htmlpublisher
 groovy
 greenballs
 jenkinslint
+extended-choice-parameter
