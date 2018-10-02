@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   main:
-    image: bitroid/bitroidjenkins:stable
+    image: bitroid/bitroidjenkins:patch
     privileged: true
     ports:
       - 8080:8080
@@ -11,7 +11,7 @@ services:
     secrets:
       - jenkins-user
       - jenkins-pass
-    
+
 secrets:
   jenkins-user:
     file: ./jenuser
