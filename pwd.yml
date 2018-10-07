@@ -1,0 +1,28 @@
+version: '3.2'
+services:
+  main:
+    image: bitroid/bitroidjenkins:stable
+    ports:
+      - 8080:8080
+      - 50000:50000
+    secrets:
+      - jenkins-user
+      - jenkins-pass
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+secrets:
+  jenkins-user:
+    file: ./jenuser
+  jenkins-pass:
+    file: ./jenpass
+
+ mailhog:
+   image: mailhog/mailhog:latest
+   ports:
+     - 1025:1025
+     - 8085:8025
+   deploy:
+     placement:
+       constraints: [node.role == worker]
