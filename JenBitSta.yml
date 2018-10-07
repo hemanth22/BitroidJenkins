@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   main:
-    image: bitroid/bitroidjenkins:stable
+    image: bitroid/bitroidjenkins:latest
     privileged: true
     ports:
       - 8080:8080
