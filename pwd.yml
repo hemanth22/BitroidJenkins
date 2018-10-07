@@ -1,7 +1,7 @@
 version: '3.2'
 services:
   main:
-    image: bitroid/bitroidjenkins:stable
+    image: bitroid/bitroidjenkins:latest
     ports:
       - 8080:8080
       - 50000:50000
