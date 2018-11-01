@@ -13,7 +13,13 @@ services:
     deploy:
       placement:
         constraints: [node.role == manager]
- 
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+    networks:
+      - jenkinsnetwork
+
   mailhog:
     image: mailhog/mailhog:latest
     ports:
@@ -22,9 +28,18 @@ services:
     deploy:
       placement:
         constraints: [node.role == worker]
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+    networks:
+      - jenkinsnetwork
 
 secrets:
   jenkins-user:
     file: ./jenuser
   jenkins-pass:
     file: ./jenpass
+
+networks:
+  jenkinsnetwork:
